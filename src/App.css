@@ -1,0 +1,74 @@
+body {
+    background-color: #c7e2ca;
+    font-family: 'Roboto Mono', monospace;
+}
+.App {
+    text-align: center;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.appTitle {
+    font-size: 5rem;
+    margin: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Reenie Beanie', cursive;
+    font-family: 'Caveat', cursive;
+    /*text-transform: uppercase;*/
+}
+.form {
+    width: 100%;
+    display: flex;
+    margin: 0 0 15px 0;
+    flex-direction: column;
+}
+.formInput, .addBtn, .listItem, .dateInput{
+    padding: 8px;
+    border: 0;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.formGroup {
+    width: 100%;
+}
+.formInput {
+    width: 100%;
+    border-radius: 3px 0 0 3px;
+}
+.dateInput {
+    border: 0;
+    width: 100%;
+}
+.addBtn {
+    background-color: #828385;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 0 3px 3px 0;
+}
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.listItem {
+    background-color: #ecd6cf;
+    text-align: left;
+    margin: 0 0 10px 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+}
+.wrapperReminder {
+    width: 90%;
+}
+.dueDate {
+    font-style: italic;
+}
+.deleteBtn {
+    width: 10%;
+    background-color: transparent;
+    border: 0;
+}
