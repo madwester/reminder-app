@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; //hooking up two functions to react components
-import { addReminder, deleteReminder } from '../actions';
+import { addReminder, deleteReminder, clearReminders } from '../actions';
 import '../App.css';
 import moment from 'moment'; //returns a human friendly string of a date
 
@@ -27,6 +27,10 @@ class App extends Component {
         console.log('deleting in application', id);
         console.log('this.props', this.props);
         this.props.deleteReminder(id);
+    }
+
+    clearReminders(){
+        this.props.clearReminders();
     }
 
     renderReminders(){
@@ -77,9 +81,16 @@ class App extends Component {
                     <button
                         type="button"
                         className="addBtn"
-                        onClick= { () => this.addReminder()}
+                        onClick={ () => this.addReminder()}
                         >
                         Add reminder
+                    </button>
+                    <button
+                        type="button"
+                        className="removeAllBtn"
+                        onClick={ () => this.props.clearReminders()}
+                    >
+                    Remove all reminders
                     </button>
                 </div>
                 { this.renderReminders() }
@@ -96,4 +107,4 @@ function mapStateToProps(state) {
 }
 
 //calling connect function from redux
-export default connect(mapStateToProps, { addReminder, deleteReminder })(App);
+export default connect(mapStateToProps, { addReminder, deleteReminder, clearReminders })(App);

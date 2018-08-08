@@ -22,7 +22,7 @@ body {
     margin: 0 0 15px 0;
     flex-direction: column;
 }
-.formInput, .addBtn, .listItem, .dateInput{
+.formInput, .addBtn, .listItem, .dateInput, .removeAllBtn {
     padding: 8px;
     border: 0;
     font-size: 1.5rem;
@@ -40,13 +40,18 @@ body {
     border: 0;
     width: 100%;
 }
-.addBtn {
-    background-color: #828385;
+.addBtn, .removeAllBtn {
     color: #fff;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     width: 100%;
     border-radius: 0 3px 3px 0;
+}
+.addBtn {
+    background-color: #828385;
+}
+.removeAllBtn {
+    background-color: #ebc4b6;
 }
 .list {
     list-style: none;
@@ -54,7 +59,7 @@ body {
     padding: 0;
 }
 .listItem {
-    background-color: #ecd6cf;
+    background-color: #e5e5e5;
     text-align: left;
     margin: 0 0 10px 0;
     font-family: 'Roboto', sans-serif;
